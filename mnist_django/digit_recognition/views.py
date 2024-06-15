@@ -7,7 +7,8 @@ import io
 import base64
 import os
 
-# Define the path to the model
+#model ko path define gareko
+
 MODEL_PATH = os.path.join(os.path.dirname(__file__), 'models/mnist_model.h5')
 
 # Load your trained model
