@@ -85,7 +85,7 @@ mnist_django/
 
 # How it Works
 ## Backend (Django):
- * **Models (models.py):* **
+* **Models (models.py):** *
   The DigitModel class represents the machine learning model used for 
   prediction.
    It loads the trained model from a file (your_model.h5).
@@ -102,18 +102,22 @@ The CSRF token is automatically included in forms and retrieved by the frontend 
 ## Frontend (HTML, CSS, JavaScript):
 **HTML Structure (index.html):**
 The HTML code provides the canvas, clear button, and heading to display the prediction.
+
  **CSS Styling (style.css):**
 CSS styles the elements for a visually appealing design.
+
 **JavaScript Functionality (script.js):**
- -Handles user interaction with the canvas (drawing, clearing).
--Converts the canvas content to an image.
--Retrieves the CSRF token.
--Sends the image data and CSRF token to the server using fetch.
+ - Handles user interaction with the canvas (drawing, clearing).
+- Converts the canvas content to an image.
+- Retrieves the CSRF token.
+- Sends the image data and CSRF token to the server using fetch.
 -Displays the prediction result from the server.
+
 ## Key Points
--The application leverages the power of machine learning to recognize digits drawn by users.
--Django provides a robust backend framework to handle the prediction logic and protect against CSRF attacks.
--JavaScript enables interactive elements like the canvas and dynamically updates the prediction result.
+- The application leverages the power of machine learning to recognize digits drawn by users.
+- Django provides a robust backend framework to handle the prediction logic and protect against CSRF attacks.
+- JavaScript enables interactive elements like the canvas and dynamically updates the prediction result.
 -The project demonstrates how to integrate machine learning models with web applications for practical use cases.
+
 # Contributing
 ##Contributions are welcome! If you have any suggestions, bug fixes, or enhancements, feel free to open an issue or submit a pull request.
