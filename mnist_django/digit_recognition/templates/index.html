@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      background-color: rgb(250, 250, 26);
+
+    
+    }
+    #canvas {
+      border: 1px solid white;
+
+      cursor: crosshair;
+    }
+
+    #clear-button {
+      margin-top: 10px;
+      background-color: goldenrod;
+      border: none;
+      height:34px;
+      width:90px;
+      border-radius: 34px;
+     
+
+    }
+    .container{
+      display:flex;
+     align-items: center;
+      flex-direction: column;
+    }
+    #draw-form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   }
+   
+
+   
+  </style>
+</head>
+<body>
+  
+  
+   <div class="container">
+    <h1>Draw a Digit</h1>
+    <form id="draw-form">
+      {% csrf_token %}
+      <canvas id="canvas" width="280" height="280"></canvas>
+      <button id="clear-button">Clear</button>
+      <h2 id="prediction-result"></h2>
+    </form>
+   </div>
+</body>
+</html>
