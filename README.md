@@ -39,6 +39,7 @@ https://github.com/frecklehead/Digit-Predictor-MNIST-.git
 ```.venv\Scripts\activate```
 
 6 **Run migrations:**
+
 ```python manage.py makemigrations```
 
 ```python manage.py migrate```
@@ -85,18 +86,18 @@ mnist_django/
 
 # How it Works
 ## Backend (Django):
-* **Models (models.py):** *
+* **Models (models.py):** 
   The DigitModel class represents the machine learning model used for 
   prediction.
    It loads the trained model from a file (your_model.h5).
 It provides a predict() method to process an image and return the predicted digit.
-* **Views (views.py):** *
+* **Views (views.py):** 
 The predict() view handles POST requests from the frontend.
 It retrieves the image data, processes it, and uses the DigitModel to predict the digit.
 It returns a JSON response with the predicted digit.
-* **URLs (urls.py):** *
+* **URLs (urls.py):** 
 Maps the URL /predict/ to the predict() view.
-* **CSRF Protection:** *
+* **CSRF Protection:** 
 Django's built-in CSRF protection is enabled.
 The CSRF token is automatically included in forms and retrieved by the frontend JavaScript code.
 ## Frontend (HTML, CSS, JavaScript):
@@ -107,17 +108,17 @@ The HTML code provides the canvas, clear button, and heading to display the pred
 CSS styles the elements for a visually appealing design.
 
 **JavaScript Functionality (script.js):**
- - Handles user interaction with the canvas (drawing, clearing).
+- Handles user interaction with the canvas (drawing, clearing).
 - Converts the canvas content to an image.
 - Retrieves the CSRF token.
 - Sends the image data and CSRF token to the server using fetch.
--Displays the prediction result from the server.
+- Displays the prediction result from the server.
 
 ## Key Points
 - The application leverages the power of machine learning to recognize digits drawn by users.
 - Django provides a robust backend framework to handle the prediction logic and protect against CSRF attacks.
 - JavaScript enables interactive elements like the canvas and dynamically updates the prediction result.
--The project demonstrates how to integrate machine learning models with web applications for practical use cases.
+- The project demonstrates how to integrate machine learning models with web applications for practical use cases.
 
 # Contributing
 ##Contributions are welcome! If you have any suggestions, bug fixes, or enhancements, feel free to open an issue or submit a pull request.
